@@ -1,0 +1,50 @@
+<p>reactive-forms works!</p>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="row g-3 needs-validation" novalidate>
+<div class="col-6 gray-background">
+   <div class="col-6">
+    <div class="mb-3">
+    <label for="firstName" class="form-label">Nombre</label>
+    <input formControlName="name" type="text" class="form-control" 
+    id="firstName"/>
+    
+  </div>
+  </div>
+  <div class="col-6">
+     <div class="mb-3 ">
+    <label for="lastName" class="form-label">Apellido</label>
+    <input formControlName="lastName" type="text" class="form-control" 
+    id="lastName"/>
+    
+  </div>
+  </div>
+  <div class="col-6">
+     <div class="mb-3 ">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input formControlName="email" type="email" class="form-control" 
+      id="inputEmail4"/>
+      
+    </div>
+  </div>
+
+</div>
+ 
+  
+
+ 
+
+   
+    
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+
+  <div class="col-6">
+    <pre>
+      {{myForm.status}}
+  </pre>
+    <pre>
+        {{myForm.value | json}}
+    </pre>
+  </div>
